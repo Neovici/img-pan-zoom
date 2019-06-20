@@ -1,0 +1,23 @@
+{
+  "name": "@neovici/img-pan-zoom",
+  "version": "1.0.0",
+  "description": "Pan zoom polymer element, uses openseadragon Edit",
+  "main": "img-pan-zoom.js",
+  "scripts": {
+    "analyze": "polymer analyze --input img-*.js > analysis.json",
+    "lint": "polymer lint img-*.js",
+    "start": "polymer serve -o"
+  },
+  "dependencies": {
+    "@polymer/paper-spinner": "^3.0.0",
+    "@polymer/polymer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@polymer/iron-component-page": "^4.0.0",
+    "@polymer/iron-demo-helpers": "^3.0.0",
+    "@polymer/paper-button": "^3.0.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "polymer-cli": "^1.9.10",
+    "wct-browser-legacy": "^1.0.1"
+  }
+}

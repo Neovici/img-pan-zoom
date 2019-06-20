@@ -6,15 +6,21 @@
 
     <title>img-pan-zoom demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="/components/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../../paper-button/paper-button.html">
-    <link rel="import" href="../img-pan-zoom.html">
+    <script type="module" src="/components/@polymer/iron-demo-helpers/demo-pages-shared-styles.js"></script>
+    <script type="module" src="/components/@polymer/iron-demo-helpers/demo-snippet.js"></script>
+    <script type="module" src="/components/@polymer/paper-button/paper-button.js"></script>
+    <script type="module" src="../img-pan-zoom.js"></script>
 
-    <style is="custom-style" include="demo-pages-shared-styles">
-    </style>
+    <script type="module">
+    const $_documentContainer = document.createElement('template');
+
+    $_documentContainer.innerHTML = `<style is="custom-style" include="demo-pages-shared-styles">
+        </style>`;
+
+    document.head.appendChild($_documentContainer.content);
+    </script>
 
     <style media="screen">
       body{
@@ -32,11 +38,10 @@
 
   </head>
   <body>
-
     <h1>Regular Images</h1>
     <demo-snippet>
       <template>
-        <img-pan-zoom dzi src='images/output.dzi'></img-pan-zoom>
+        <img-pan-zoom dzi="" src="images/output.dzi"></img-pan-zoom>
       </template>
     </demo-snippet>
 
@@ -88,17 +93,17 @@
         </style>
 
         <h1>Deep Zoom Image</h1>
-        <img-pan-zoom id="img" src='[[src]]'></img-pan-zoom>
+        <img-pan-zoom id="img" src="[[src]]"></img-pan-zoom>
 
         <div class="horizontal">
-          <paper-button class="zoom" on-tap="zoomIn" raised>Zoom In</paper-button>
-          <paper-button class="swap" on-tap="swap" raised>preload New Image</paper-button>
-          <paper-button class="zoom" on-tap="zoomOut" raised>Zoom Out</paper-button>
+          <paper-button class="zoom" on-tap="zoomIn" raised="">Zoom In</paper-button>
+          <paper-button class="swap" on-tap="swap" raised="">preload New Image</paper-button>
+          <paper-button class="zoom" on-tap="zoomOut" raised="">Zoom Out</paper-button>
         </div>
 
-
       </template>
-      <script>
+      <script type="module">
+      import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn';
       document.addEventListener('WebComponentsReady', function() {
         Polymer({
           is: 'demo-element',
