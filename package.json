@@ -1,6 +1,6 @@
 {
   "name": "@neovici/img-pan-zoom",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Pan zoom polymer element, uses openseadragon Edit",
   "main": "img-pan-zoom.js",
   "scripts": {
