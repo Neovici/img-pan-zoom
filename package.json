@@ -1,11 +1,13 @@
 {
   "name": "@neovici/img-pan-zoom",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Pan zoom polymer element, uses openseadragon Edit",
   "main": "img-pan-zoom.js",
   "scripts": {
     "analyze": "polymer analyze --input img-*.js > analysis.json",
     "lint": "polymer lint img-*.js",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags",
     "start": "polymer serve -o"
   },
   "dependencies": {
