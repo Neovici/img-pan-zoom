@@ -68,7 +68,7 @@ Polymer({
 
     <!-- Only preload regular images -->
     <template is="dom-if" if="[[!dzi]]">
-      <paper-spinner-lite hidden\$="[[hideSpinner]]" active="[[loading]]"></paper-spinner-lite>
+      <paper-spinner-lite hidden$="[[hideSpinner]]" active="[[loading]]"></paper-spinner-lite>
       <img-loader loaded="{{loaded}}" loading="{{loading}}" error="{{error}}" src="[[src]]"></img-loader>
     </template>
 
